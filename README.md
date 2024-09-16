@@ -7,7 +7,7 @@ This project implements a simplified model of communication between an Energy Ma
 The system is comprised of four primary components:
 
 ### EMS (Energy Management System):
-Reads target power values, and sends them to the ESS every 3(it can be 15 minutes but avoid wasting time , it is 3 s) seconds via MQTT. It also stores ESS data in an SQLite database.
+Reads target power values, and sends them to the ESS every 3(it can be 15 minutes but avoid wasting time , it is just 3 s) seconds via MQTT. It also stores ESS data in an SQLite database.
 ### ESS (Energy Storage System): 
 Simulates an energy storage unit, generating mock values for temperature, state of charge, and actual power. Sends this data to EMS every 3 seconds.
 ### MQTT Broker:
@@ -20,17 +20,17 @@ The communication between EMS and ESS occurs via MQTT, with the SQLite database 
 
 ## Components 
 ### Energy Management System (EMS)
-- **Function:** Reads power_target from a predefined file and sends it to ESS every 5 seconds.
-- **timestamp:** Time of sending.
-- **power_target:** The target power value to be applied.
-- **Database:** Stores data received from ESS, including power_actual, temperature, and state_of_charge, with a timestamp.
+- **Function:** Reads power_target from a predefined file and sends it to ESS every 3 seconds.
+- **timestamp:** Time of sending (year-month-day).
+- **power_target:** The target power value to be applied (received from **power_target.csv** file).
+- **Database:** Stores data received from ESS, including id, power_actual, temperature, and state_of_charge, with a timestamp.
 ### Energy Storage System (ESS)
 - **Function:** Simulates an energy storage unit. Receives power_target from EMS, sends back power_actual (same as power_target for simplicity) and mock values for temperature and state_of_charge.
-- **timestamp:** Time of sending.
+- **timestamp:** Time of sending (year-month-day).
 - **power_actual:** Same as power_target(because there was no actual devices).
-- **temperature:** Simulated value(random value between 10 and 90) and if the value exceeds that interval,the system logs data
+- **temperature:** Simulated value(random value between 10 and 90) and if the value exceeds that interval,the system logs data into **data_quality.log**
 - **state_of_charge:** Simulated value.
-Fallback Mechanism: In case of a connection issue, the ESS stores data locally and sends it to EMS once the connection is restored.
+- **Fallback Mechanism:** In case of a connection issue, the ESS stores data locally into **fallback_data.csv** and sends it to EMS once the connection is restored.
 ### MQTT Broker (open source Eclipse Mosquitto broker used)
 Facilitates the message exchange between EMS and ESS.
 - **Uses channels to transmit data:** localhost used in the project  with port=1883 and broker = "localhost"
