@@ -30,7 +30,7 @@ The communication between EMS and ESS occurs via MQTT, with the SQLite database 
 - **power_actual:** Same as power_target(because there was no actual devices).
 - **temperature:** Simulated value(random value between 10 and 90) and if the value exceeds that interval,the system logs data into **data_quality.log**
 - **state_of_charge:** Simulated value.
-- **Fallback Mechanism:** In case of a connection issue, the ESS stores data locally into **fallback_data.csv** and sends it to EMS once the connection is restored.
+- **Fallback Mechanism:** In case of a connection issue, the ESS stores data locally into **fallback_data.csv** and sends it to EMS once the connection is restored.This can be tested in **Test_ESS.py**
 ### MQTT Broker (open source Eclipse Mosquitto broker used)
 Facilitates the message exchange between EMS and ESS.
 - **Uses channels to transmit data:** localhost used in the project  with port=1883 and broker = "localhost"
