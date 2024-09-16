@@ -19,27 +19,26 @@ The communication between EMS and ESS occurs via MQTT, with the SQLite database 
 - **power_target:** The target power value to be applied.
 - **Database:** Stores data received from ESS, including power_actual, temperature, and state_of_charge, with a timestamp.
 ### Energy Storage System (ESS)
-Function: Simulates an energy storage unit. Receives power_target from EMS, sends back power_actual (same as power_target for simplicity) and mock values for temperature and state_of_charge.
-Data Sent:
-timestamp: Time of sending.
-power_actual: Same as power_target.
-temperature: Simulated value.
-state_of_charge: Simulated value.
+- **Function:** Simulates an energy storage unit. Receives power_target from EMS, sends back power_actual (same as power_target for simplicity) and mock values for temperature and state_of_charge.
+- **timestamp:** Time of sending.
+- **power_actual:** Same as power_target.
+- **temperature:** Simulated value.
+- **state_of_charge:** Simulated value.
 Fallback Mechanism: In case of a connection issue, the ESS stores data locally and sends it to EMS once the connection is restored.
 ### MQTT Broker
 Facilitates the message exchange between EMS and ESS.
-Uses channels to transmit data:
-ems/power_target: For EMS to send power target to ESS.
-ess/data: For ESS to send back data to EMS.
+- **Uses channels to transmit data:**
+- **ems/power_target:** For EMS to send power target to ESS.
+-**ess/data:** For ESS to send back data to EMS.
 ### SQLite Database
 Stores the following data from ESS:
--id
--timestamp
--power_actual
--temperature
--state_of_charge
+-**id**
+-**timestamp**
+-**power_actual**
+-**temperature**
+-**state_of_charge**
 ## Setup & Installation
-1. Clone the repository:
+### Clone the repository:
    ```bash
    git clone https://github.com/yourusername/ems-ess-mqtt.git
    cd ems-ess-mqtt
