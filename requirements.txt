@@ -1,0 +1,4 @@
+paho-mqtt==2.1.0
+pyhton==3.9.12
+sqilte3==3.39.2
+mosquitto==2.0.18
