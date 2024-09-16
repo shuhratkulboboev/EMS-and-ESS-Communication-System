@@ -29,7 +29,7 @@ Fallback Mechanism: In case of a connection issue, the ESS stores data locally a
 Facilitates the message exchange between EMS and ESS.
 - **Uses channels to transmit data:**
 - **ems/power_target:** For EMS to send power target to ESS.
--**ess/data:** For ESS to send back data to EMS.
+- **ess/data:** For ESS to send back data to EMS.
 ### SQLite Database
 Stores the following data from ESS:
 - **id**
