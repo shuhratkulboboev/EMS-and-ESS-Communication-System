@@ -12,14 +12,14 @@ MQTT Broker: Facilitates communication between the EMS and ESS.
 SQLite Database: Stores data received from the ESS.
 The communication between EMS and ESS occurs via MQTT, with the SQLite database storing all the incoming data from ESS for historical analysis.
 
-## Components
-1. ### Energy Management System (EMS)
+## Components 
+### Energy Management System (EMS)
 Function: Reads power_target from a predefined file and sends it to ESS every 5 seconds.
 Data Sent:
 timestamp: Time of sending.
 power_target: The target power value to be applied.
 Database: Stores data received from ESS, including power_actual, temperature, and state_of_charge, with a timestamp.
-2. ### Energy Storage System (ESS)
+### Energy Storage System (ESS)
 Function: Simulates an energy storage unit. Receives power_target from EMS, sends back power_actual (same as power_target for simplicity) and mock values for temperature and state_of_charge.
 Data Sent:
 timestamp: Time of sending.
@@ -27,12 +27,12 @@ power_actual: Same as power_target.
 temperature: Simulated value.
 state_of_charge: Simulated value.
 Fallback Mechanism: In case of a connection issue, the ESS stores data locally and sends it to EMS once the connection is restored.
-3. ### MQTT Broker
+### MQTT Broker
 Facilitates the message exchange between EMS and ESS.
 Uses channels to transmit data:
 ems/power_target: For EMS to send power target to ESS.
 ess/data: For ESS to send back data to EMS.
-4. ### SQLite Database
+### SQLite Database
 Stores the following data from ESS:
 -id
 -timestamp
