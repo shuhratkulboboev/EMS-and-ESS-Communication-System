@@ -1,8 +1,8 @@
 # EMS-and-ESS-Communication-System
-Overview
+**Overview**
 This project implements a simplified model of communication between an Energy Management System (EMS) and an Energy Storage System (ESS), using MQTT for messaging and SQLite for data storage. The task simulates an industrial energy storage unit being controlled by commands issued from a central EMS. The main goal is to ensure that the EMS can monitor and control the ESS in real-time while handling possible connectivity issues.
 
-Architecture
+**Architecture**
 The system is comprised of four primary components:
 
 EMS (Energy Management System): Operates in the cloud, reads target power values, and sends them to the ESS every 5 seconds via MQTT. It also stores ESS data in an SQLite database.
@@ -11,7 +11,7 @@ MQTT Broker: Facilitates communication between the EMS and ESS.
 SQLite Database: Stores data received from the ESS.
 The communication between EMS and ESS occurs via MQTT, with the SQLite database storing all the incoming data from ESS for historical analysis.
 
-Components
+**Components**
 1. Energy Management System (EMS)
 Function: Reads power_target from a predefined file and sends it to ESS every 5 seconds.
 Data Sent:
