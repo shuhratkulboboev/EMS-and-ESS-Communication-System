@@ -79,3 +79,9 @@ Stores the following data from ESS and database and table called "TestDB.db" and
  ```bash
    python ESM.py
  ```
+## Todo List
+- Automatic Reconnection: Add logic to automatically reconnect to the MQTT broker with retries.
+- Historical Analysis and Predict future performance: Analyze historical data for patterns and anomalies and create ML model for forecasting.
+- Cloud integration into ESS part instead of CSV file
+- Monitoring Dashboards: Create visual dashboards for data and system status.
+- Load Balancing: Consider load balancing and distributed processing for handling increased load.
