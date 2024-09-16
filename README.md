@@ -11,6 +11,7 @@ ESS (Energy Storage System): Simulates an energy storage unit, generating mock v
 MQTT Broker: Facilitates communication between the EMS and ESS.
 SQLite Database: Stores data received from the ESS.
 The communication between EMS and ESS occurs via MQTT, with the SQLite database storing all the incoming data from ESS for historical analysis.
+![image](https://github.com/user-attachments/assets/22dae66a-e2ce-47c9-86fc-99c140650561)
 
 ## Components 
 ### Energy Management System (EMS)
@@ -21,8 +22,8 @@ The communication between EMS and ESS occurs via MQTT, with the SQLite database 
 ### Energy Storage System (ESS)
 - **Function:** Simulates an energy storage unit. Receives power_target from EMS, sends back power_actual (same as power_target for simplicity) and mock values for temperature and state_of_charge.
 - **timestamp:** Time of sending.
-- **power_actual:** Same as power_target.
-- **temperature:** Simulated value.
+- **power_actual:** Same as power_target(because there was no actual devices).
+- **temperature:** Simulated value(random value between 10 and 90).
 - **state_of_charge:** Simulated value.
 Fallback Mechanism: In case of a connection issue, the ESS stores data locally and sends it to EMS once the connection is restored.
 ### MQTT Broker
