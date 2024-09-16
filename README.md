@@ -28,7 +28,7 @@ The communication between EMS and ESS occurs via MQTT, with the SQLite database 
 - **Function:** Simulates an energy storage unit. Receives power_target from EMS, sends back power_actual (same as power_target for simplicity) and mock values for temperature and state_of_charge.
 - **timestamp:** Time of sending.
 - **power_actual:** Same as power_target(because there was no actual devices).
-- **temperature:** Simulated value(random value between 10 and 90).
+- **temperature:** Simulated value(random value between 10 and 90) and if the value exceeds that interval,the system logs data
 - **state_of_charge:** Simulated value.
 Fallback Mechanism: In case of a connection issue, the ESS stores data locally and sends it to EMS once the connection is restored.
 ### MQTT Broker (open source Eclipse Mosquitto broker used)
