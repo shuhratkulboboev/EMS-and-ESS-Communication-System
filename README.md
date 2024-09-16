@@ -14,11 +14,15 @@ The communication between EMS and ESS occurs via MQTT, with the SQLite database 
 
 ## Components 
 ### Energy Management System (EMS)
-**Function:** Reads power_target from a predefined file and sends it to ESS every 5 seconds.
+**Function:** 
+Reads power_target from a predefined file and sends it to ESS every 5 seconds.
 **Data Sent:**
-**timestamp:** Time of sending.
-**power_target:** The target power value to be applied.
-**Database:** Stores data received from ESS, including power_actual, temperature, and state_of_charge, with a timestamp.
+**timestamp:** 
+Time of sending.
+**power_target:** 
+The target power value to be applied.
+**Database:** 
+Stores data received from ESS, including power_actual, temperature, and state_of_charge, with a timestamp.
 ### Energy Storage System (ESS)
 Function: Simulates an energy storage unit. Receives power_target from EMS, sends back power_actual (same as power_target for simplicity) and mock values for temperature and state_of_charge.
 Data Sent:
