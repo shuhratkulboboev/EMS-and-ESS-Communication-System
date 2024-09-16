@@ -32,11 +32,11 @@ Facilitates the message exchange between EMS and ESS.
 - **ess/data:** For ESS to send back data to EMS.
 ### SQLite Database
 Stores the following data from ESS:
-- **id**
-- **timestamp**
-- **power_actual**
-- **temperature**
-- **state_of_charge**
+- **id** -> Integer
+- **timestamp** -> Text
+- **power_actual** ->Real
+- **temperature** -> Real
+- **state_of_charge** -> Real
 ## Setup & Installation
 ### Clone the repository:
    ```bash
