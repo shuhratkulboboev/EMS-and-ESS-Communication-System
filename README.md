@@ -47,15 +47,22 @@ Stores the following data from ESS:
   ```bash
    python3 -m venv venv
    source venv/bin/activate
+  ```
 ### Install the required dependencies:
-```bash```
+```bash
    pip install -r requirements.txt
+```
 ### Run the MQTT broker (e.g., Mosquitto) locally:
- ```bash```
+ ```bash
    mosquitto
+ ```
 ### Start the EMS:
+ ```bash
    python ems.py
+ ```
 ### Start the ESS:
+ ```bash
    python ess.py
+ ```
 
 
