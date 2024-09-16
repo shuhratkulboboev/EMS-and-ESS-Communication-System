@@ -64,11 +64,11 @@ Stores the following data from ESS and database and table called "TestDB.db" and
  ```
 ### Start the EMS:
  ```bash
-   python ems.py
+   python ESS.py
  ```
 ### Start the ESS:
  ```bash
-   python ess.py
+   python ESM.py
  ```
 
 
