@@ -47,7 +47,6 @@ Stores the following data from ESS and database and table called "TestDB.db" and
 ### Clone the repository:
    ```bash
    git clone https://github.com/yourusername/ems-ess-mqtt.git
-   cd ems-ess-mqtt
    ```
 ### Create a virtual environment and activate it:
   ```bash
