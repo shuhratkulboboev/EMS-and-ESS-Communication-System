@@ -39,9 +39,9 @@ Stores the following data from ESS:
 - **state_of_charge**
 ## Setup & Installation
 ### Clone the repository:
-   ```bash```
+   ```bash
    git clone https://github.com/yourusername/ems-ess-mqtt.git
-   cd ems-ess-mqtt
+   cd ems-ess-mqtt```
 ### Create a virtual environment and activate it:
 
    python3 -m venv venv
