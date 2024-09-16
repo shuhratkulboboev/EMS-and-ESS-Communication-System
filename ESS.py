@@ -117,7 +117,7 @@ client.loop_start()
 # Keep the ESS running and simulating data
 try:
     while True:
-        time.sleep(5)  # ESS sends/receives data every 5 seconds
+        time.sleep(3)  # ESS sends/receives data every 5 seconds
 except KeyboardInterrupt:
     print("Stopping ESS...")
 
