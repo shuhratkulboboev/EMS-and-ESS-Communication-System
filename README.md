@@ -42,14 +42,14 @@ Stores the following data from ESS:
    ```bash
    git clone https://github.com/yourusername/ems-ess-mqtt.git
    cd ems-ess-mqtt
-  ```bash
+   ```bash
    python3 -m venv venv
    source venv/bin/activate
-  ```bash
+   ```bash
    pip install -r requirements.txt
-  ```bash
+   ```bash
    mosquitto
-  ```bash
+   ```bash
    python ems.py
   ```bash
    python ess.py
