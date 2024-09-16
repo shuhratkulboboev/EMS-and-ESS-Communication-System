@@ -31,9 +31,9 @@ The communication between EMS and ESS occurs via MQTT, with the SQLite database 
 - **temperature:** Simulated value(random value between 10 and 90).
 - **state_of_charge:** Simulated value.
 Fallback Mechanism: In case of a connection issue, the ESS stores data locally and sends it to EMS once the connection is restored.
-### MQTT Broker
+### MQTT Broker (open source Eclipse Mosquitto broker used)
 Facilitates the message exchange between EMS and ESS.
-- **Uses channels to transmit data:**
+- **Uses channels to transmit data:** localhost used in the project  with port=1883 and broker = "localhost"
 - **ems/power_target:** For EMS to send power target to ESS.
 - **ess/data:** For ESS to send back data to EMS.
 ### SQLite Database
