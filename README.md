@@ -32,13 +32,26 @@ Facilitates the message exchange between EMS and ESS.
 -**ess/data:** For ESS to send back data to EMS.
 ### SQLite Database
 Stores the following data from ESS:
--**id**
--**timestamp**
--**power_actual**
--**temperature**
--**state_of_charge**
+- **id**
+- **timestamp**
+- **power_actual**
+- **temperature**
+- **state_of_charge**
 ## Setup & Installation
 ### Clone the repository:
    ```bash
    git clone https://github.com/yourusername/ems-ess-mqtt.git
    cd ems-ess-mqtt
+  ```bash
+   python3 -m venv venv
+   source venv/bin/activate
+  ```bash
+   pip install -r requirements.txt
+  ```bash
+   mosquitto
+  ```bash
+   python ems.py
+  ```bash
+   python ess.py
+
+
