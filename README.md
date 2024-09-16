@@ -70,5 +70,12 @@ Stores the following data from ESS and database and table called "TestDB.db" and
  ```bash
    python ESM.py
  ```
-
-
+## Test Fallback Mechanism
+### Start the ESS:
+ ```bash
+   python Test_ESS.py
+ ```
+### Start the ESM:
+ ```bash
+   python ESM.py
+ ```
