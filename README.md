@@ -9,7 +9,7 @@ The system is comprised of four primary components:
 ### EMS (Energy Management System):
 Reads target power values, and sends them to the ESS every 3(it can be 15 minutes but avoid wasting time , it is 3 s) seconds via MQTT. It also stores ESS data in an SQLite database.
 ### ESS (Energy Storage System): 
-Simulates an energy storage unit, generating mock values for temperature, state of charge, and actual power. Sends this data to EMS every 5 seconds.
+Simulates an energy storage unit, generating mock values for temperature, state of charge, and actual power. Sends this data to EMS every 3 seconds.
 ### MQTT Broker:
 Facilitates communication between the EMS and ESS.
 ### SQLite Database:
