@@ -1,5 +1,7 @@
 # EMS-and-ESS-Communication-System
-This project implements a simplified model of communication between an Energy Management System (EMS) and an Energy Storage System (ESS), using MQTT for messaging and SQLite for data storage. 
+Overview
+This project implements a simplified model of communication between an Energy Management System (EMS) and an Energy Storage System (ESS), using MQTT for messaging and SQLite for data storage. The task simulates an industrial energy storage unit being controlled by commands issued from a central EMS. The main goal is to ensure that the EMS can monitor and control the ESS in real-time while handling possible connectivity issues.
+
 Architecture
 The system is comprised of four primary components:
 
@@ -31,47 +33,13 @@ ems/power_target: For EMS to send power target to ESS.
 ess/data: For ESS to send back data to EMS.
 4. SQLite Database
 Stores the following data from ESS:
-timestamp
-power_actual
-temperature
-state_of_charge
+-id
+-timestamp
+-power_actual
+-temperature
+-state_of_charge
 Setup & Installation
-Clone the repository:
-
-bash
-Копировать код
-git clone https://github.com/yourusername/ems-ess-mqtt.git
-cd ems-ess-mqtt
-Create a virtual environment and activate it:
-
-bash
-Копировать код
-python3 -m venv venv
-source venv/bin/activate
-Install the required dependencies:
-
-bash
-Копировать код
-pip install -r requirements.txt
-Run the MQTT broker (e.g., Mosquitto) locally:
-
-For Mosquitto (install via your package manager or Docker), start the broker:
-bash
-Копировать код
-mosquitto
-Start the EMS and ESS systems:
-
-Start the EMS:
-bash
-Копировать код
-python ems.py
-Start the ESS:
-bash
-Копировать код
-python ess.py
-Running Tests
-Run the unit tests to verify the system's functionality, including the connection fallback mechanism for ESS:
-
-bash
-Копировать код
-pytest tests/
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/ems-ess-mqtt.git
+   cd ems-ess-mqtt
