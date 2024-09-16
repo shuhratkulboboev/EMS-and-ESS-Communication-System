@@ -42,15 +42,20 @@ Stores the following data from ESS:
    ```bash
    git clone https://github.com/yourusername/ems-ess-mqtt.git
    cd ems-ess-mqtt
+### Create a virtual environment and activate it:
    ```bash
    python3 -m venv venv
    source venv/bin/activate
+### Install the required dependencies:
    ```bash
    pip install -r requirements.txt
+### Run the MQTT broker (e.g., Mosquitto) locally:
    ```bash
    mosquitto
+### Start the EMS:
    ```bash
    python ems.py
+### Start the ESS:
   ```bash
    python ess.py
 
